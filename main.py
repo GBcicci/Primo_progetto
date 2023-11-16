@@ -1,8 +1,6 @@
 import pandas as pd
-
-
-# commit 1 funzione main--> apre il csv con pd
-# commit 2 richiama main--> funzione statistica per calcolare qualcosa
+#commit 1 funzione main--> apre il csv con pd
+#commit 2 richiama main--> funzione statistica per calcolare qualcosa
 
 def leggi(path: str) -> pd.DataFrame:
     return pd.read_csv(path)

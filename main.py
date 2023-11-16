@@ -6,4 +6,11 @@ import pandas as pd
 if __name__ == '__main__':
 
     file = pd.read_csv('Airline Delay.csv')
-    print(file.head)
+    #print(dataset.head)
+
+
+    def analyze_dataset(dataset):
+        total_flights = dataset['arr_flights'].sum()
+        return total_flights
+
+    print(analyze_dataset(file))

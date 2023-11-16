@@ -12,5 +12,13 @@ if __name__ == '__main__':
 
     statistica_canciani_savio(df)
 
+def statistiche(data_str):
 
+    df = pd.read_csv(StringIO(data_str), sep='\t')
 
+    colonne_utilizzate = ['arr_flights', 'arr_del15', 'arr_delay', 'carrier_delay', 'weather_delay', 'nas_delay', 'security_delay', 'late_aircraft_delay']
+    statistiche = df[colonne_utilizzate].agg(['mean', 'max'])
+    return statistiche
+
+risultato_statistiche = statistiche(data_str)
+print(risultato_statistiche)
